@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+
+<h1>
+    <%= title %>
+</h1>
+<form action="/update/" method="POST">
+  <input type="hidden" name="id" value="<%= records._id %>">
+    <div class="form-group">
+      <label for="leave">Want To apply For leave</label>
+      <input
+        type="date"
+        id="leave"
+        name="leave"
+        class="form-control"
+        placeholder="Want To apply For leave"
+        value= "<%= records.leave%>"
+      />
+    </div>
+    <div class="form-group">
+      <label for="purpose">Purpose For Leave :</label>
+      <input
+        type="purpose"
+        id="purpose"
+        name="purpose"
+        class="form-control"
+        placeholder="Enter purpose"
+        value= "<%= records.purpose%>"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+
+
+
+</body>
+</html>
+

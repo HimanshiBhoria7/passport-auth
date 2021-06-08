@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/fdb8ea18eb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+   
+</head>
+<body>
+  <li><a href="/users/logout">Log Out</a></li>
+   
+   <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Leave</th>
+        <th scope="col">Purpose</th>
+        <th scope="col">Leave Approval</th>
+        
+      
+      </tr>
+    </thead>
+    <tbody>
+              
+              <%usersDetails.forEach(user1 =>{%>
+              <tr> 
+                <th scope="row"><%=user1._id%></th>
+                <td><%= user1.leave%></td>
+                <td><%= user1.purpose%></td>
+                <td><a href="/edit/<%=user1._id%>"><i class="fas fa-edit fa-2x"></i></a></td>
+              </tr>
+              <%})%>
+            
+    
+            </tbody>
+  </table> 
+</body>
+</html>

@@ -1,0 +1,53 @@
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome </p> 
+
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
+
+
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <%- include("./partials/messages") %>
+        
+        <form action="/dashboard" method="POST">
+          <div class="form-group">
+            <label for="leave">Want To apply For leave</label>
+            <input
+              type="leave"
+              id="leave"
+              name="leave"
+              class="form-control"
+              placeholder="Want To apply For leave"
+              value="<%= typeof purpose != 'undefined' ? leave : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="purpose">Purpose For Leave :</label>
+            <input
+              type="purpose"
+              id="purpose"
+              name="purpose"
+              class="form-control"
+              placeholder="Enter purpose"
+              value="<%= typeof purpose != 'undefined' ? purpose : '' %>"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </form>
+          <%userDetails.forEach(user1 => { %>  
+            <table>   
+            <tr>
+            <td><%= user1.leave %></td>
+            <td><%= user1.purpose %></td>
+            <%})%>
+  </tr>
+  </table>
+
+
+    
+             
+            
+          
+    </div>
+  </div>
+  
